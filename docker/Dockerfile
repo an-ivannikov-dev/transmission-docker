@@ -12,7 +12,7 @@ RUN apt-get update && \
     chmod -R 777 /transmission && \
     rm -rf /var/lib/apt/lists/*
 
-COPY ["settings.json", "done.sh", "/transmission"]
+COPY ["settings.json", "done.sh", "/transmission/"]
 
 RUN mkdir /watch && mkdir /incomplete && mkdir /download && \
     chmod -R 777 /watch && chmod -R 777 /incomplete && chmod -R 777 /download
