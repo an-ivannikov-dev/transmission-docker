@@ -1,0 +1,14 @@
+.vscode
+data
+docker
+Dockerfile*
+docker-compose*
+.dockerignore
+.DS_Store
+.editorconfig
+.git
+.gitattributes
+.gitignore
+.env
+README.md
+LICENSE
