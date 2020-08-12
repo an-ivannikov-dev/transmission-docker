@@ -16,7 +16,7 @@ docker push ivannikovdev/transmission:latest
 ```bash
 docker run --rm \
   --name transmission \
-  --volume "$PWD/data/transmission/transmission-daemon:/transmission" \
+  --volume "$PWD/data/transmission/transmission:/transmission" \
   --volume "$PWD/settings.json:/transmission/settings.json" \
   --volume "$PWD/done.sh:/transmission/done.sh" \
   --volume "$PWD/data/transmission/watch:/watch" \
@@ -25,3 +25,5 @@ docker run --rm \
   ivannikovdev/transmission:latest \
   /bin/bash -c "/usr/bin/transmission-daemon -f --config-dir /transmission"
 ```
+
+> Copy the *.torrent file to the 'data/transmission/watch' folder which is mounted to the '/watch' folder inside the docker container.

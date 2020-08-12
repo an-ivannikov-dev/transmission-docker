@@ -2,8 +2,8 @@ version: "3"
 
 services:
   transmission:
-    build:
-      context: .
+    #build:
+    #  context: .
     image: ivannikovdev/transmission:latest
     command: /usr/bin/transmission-daemon -f --pid-file /transmission/transmission.pid --config-dir /transmission
     hostname: transmission
