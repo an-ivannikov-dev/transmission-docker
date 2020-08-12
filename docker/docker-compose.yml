@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  transmission:
+    build:
+      context: .
+    image: ivannikovdev/transmission:latest
+    command: /usr/bin/transmission-daemon -f --pid-file /transmission/transmission.pid --config-dir /transmission
+    hostname: transmission
+    ports:
+      - "9091:9091"
+      - "51413:51413"
+    expose:
+      - "9091"
+      - "51413"
+    volumes:
+      - "../data/transmission/transmission:/transmission"
+      - "./settings.json:/transmission/settings.json"
+      - "./done.sh:/transmission/done.sh"
+      - "../data/transmission/watch:/watch"
+      - "../data/transmission/incomplete:/incomplete"
+      - "../data/transmission/download:/download"
