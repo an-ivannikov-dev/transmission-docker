@@ -22,6 +22,6 @@ docker run --rm \
   --volume "$PWD/data/transmission/watch:/watch" \
   --volume "$PWD/data/transmission/incomplete:/incomplete" \
   --volume "$PWD/data/transmission/download:/download" \
-  ivannikovdev/transmissiont:latest \
+  ivannikovdev/transmission:latest \
   /bin/bash -c "/usr/bin/transmission-daemon -f --config-dir /transmission"
 ```
