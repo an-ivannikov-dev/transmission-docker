@@ -22,4 +22,4 @@ EXPOSE 9091       51413
 
 VOLUME ["/transmission", "/watch", "/incomplete", "/download"]
 
-RUN /usr/bin/transmission-daemon -f --config-dir /transmission
+CMD /usr/bin/transmission-daemon -f --config-dir /transmission
